@@ -1,0 +1,22 @@
+<!doctype html>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<title>Hello from Flask</title>
+
+{% if search_string != '' %}
+  <h3>Filtering books for <em>{{ search_string }}</em>.</h3>
+  <p><a href="{{ url_for('home')}}">Reset filter</a></p>
+{% else %}
+  <h2>All books</h2>
+{% endif %}
+
+<ul>
+{% for book in books %}
+  <li><a href="{{ url_for('book', author=book.author, title=book.title) }}">{{ book.title }}</a> — {{ book.author }}</li>
+{% endfor %}
+</ul>
+
+<!--  leitarboxið er alltaf sýnt -->
+<form action="{{ url_for('home') }}" method="get">
+  <input type="text" name="search" placeholder="filter...">
+  <input type="submit" name="" value="go">
+</form>
