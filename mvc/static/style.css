@@ -1,0 +1,12 @@
+/* höfum síðuna örlítið þægilegri */
+body{
+  width: 512px;
+  margin: 64px auto;
+  line-height: 150%;
+}
+a{
+  color: rgb(50, 136, 134)
+}
+a:hover{
+  color: rgb(65, 177, 175)
+}
