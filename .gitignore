@@ -3,3 +3,4 @@ mvc/mvc_project/
 *.pyc
 *.DS_STORE
 upload.sh
+api/flask/
